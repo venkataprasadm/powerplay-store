@@ -1,0 +1,22 @@
+# Render blueprint for a temporary demo API (in-memory store, data resets on restart).
+# Demo only: dev sign-in is enabled so the UI can switch between Asha, Ravi and Admin.
+services:
+  - type: web
+    name: powerplay-store-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./src/IplStore.Api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health/live
+    autoDeployTrigger: checksPass   # deploy only after the GitHub CI checks on main are green
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: Storage__Provider
+        value: InMemory
+      - key: Auth__EnableDevTokens
+        value: "true"
+      - key: Jwt__SigningKey
+        generateValue: true
+      - key: Cors__AllowedOrigins__0
+        value: https://powerplaystore.venkataprasadm.com

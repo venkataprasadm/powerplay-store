@@ -1,0 +1,9 @@
+{
+  "indexingMode": "consistent",
+  "automatic": true,
+  "includedPaths": [{ "path": "/*" }],
+  "excludedPaths": [{ "path": "/\"_etag\"/?" }, { "path": "/description/?" }, { "path": "/lines/*" }],
+  "compositeIndexes": [
+    [{ "path": "/createdUtc", "order": "ascending" }, { "path": "/id", "order": "ascending" }]
+  ]
+}

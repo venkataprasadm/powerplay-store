@@ -1,0 +1,17 @@
+global using IplStore.Application.Abstractions;
+global using IplStore.Application.Common;
+global using IplStore.Application.Contracts;
+global using IplStore.Application.Paging;
+global using IplStore.Application.Seeding;
+global using IplStore.Application.Services;
+global using IplStore.Application.Shipping;
+global using IplStore.Domain.Carts;
+global using IplStore.Domain.Catalogue;
+global using IplStore.Domain.Common;
+global using IplStore.Domain.Exceptions;
+global using IplStore.Domain.Orders;
+global using IplStore.Infrastructure.Cosmos;
+global using IplStore.Infrastructure.Cosmos.Documents;
+global using IplStore.Infrastructure.InMemory;
+global using IplStore.Tests.Support;
+global using Microsoft.Azure.Cosmos.Linq;

@@ -1,0 +1,17 @@
+bin/
+obj/
+TestResults/
+*.user
+.vs/
+.idea/
+node_modules/
+web/dist/
+*.log
+.DS_Store
+
+# Local-only material, never published
+INTERVIEW-NOTES.md
+/ipl-store/
+.env
+*.env.local
+coverage/
